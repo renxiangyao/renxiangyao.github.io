@@ -13,5 +13,12 @@
 
 <h3 id="SAS"><a href="#SAS" class="headerlink" title="SAS"></a>SAS</h3><figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">libname</span> data <span class="string">&quot;C:\SAS\data&quot;</span>;</span><br><span class="line"><span class="keyword">data </span>work.test1;</span><br><span class="line"><span class="meta">set</span> data.testdata;</span><br><span class="line"><span class="keyword">run;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>GitHub</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Testing</tag>
+      </tags>
   </entry>
 </search>
