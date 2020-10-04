@@ -223,20 +223,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -276,6 +276,96 @@
 
         <div class="content index posts-expand">
           
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Vincent Ren">
+      <meta itemprop="description" content="A personal data science blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vincent Ren">
+    </span>
+
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/" class="post-title-link" itemprop="url">A brief introduction to XGBoost, LightGBM, CatBoost</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-14 22:46:38" itemprop="dateCreated datePublished" datetime="2020-08-14T22:46:38+12:00">2020-08-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Intro-and-Summary/" itemprop="url" rel="index"><span itemprop="name">Intro and Summary</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Recently I tried out using <strong>CatBoost</strong> to carry out a machine learning prediction, and found it very useful and convenient. It has unique features and strengths comparing to the other very popular Boosting Machine ML (Machine Learning) algorithms like XGBoost, LightGBM, etc. Hence, I think writing a blog to briefly introduce and summarise these popularly used Boosting Machines ML (Machine Learning) algorithms would be handy. Some of the statements are based on my own understanding and experiences and may be biased.</p>
+<h1 id="Boosting-in-Ensemble-Learning"><a href="#Boosting-in-Ensemble-Learning" class="headerlink" title="Boosting in Ensemble Learning"></a>Boosting in Ensemble Learning</h1><p>To understand Boosting, we use the structure below to better illustrate the idea:</p>
+<ul>
+<li>Ensemble Learning    <ul>
+<li>Bagging</li>
+<li>Boosting<ul>
+<li>GBM</li>
+<li>XGBoost</li>
+<li>LightGBM</li>
+<li>CatBoost</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>What is an Ensemble Learning? As the word “Ensemble” reveals, it is a concept of collective intelligence. Instead of using only one machine learning model to predict the target, Ensemble learning combines multiple ML models, and gives an aggregated prediction from several models.</p>
+<p>Bagging and Boosting are 2 widely used Ensemble Learning methods. In short, Bagging split the training dataset into multiple datasets, then build machine learning models (usually decision tree model) on each splited dataset, then aggregated the output to provide a single prediction on the target. In Boosting, the models are built sequetially where each subsequent decision tree model aims to reduce the errors of previous decision tree model. Subsequent models are based on previous model, then the final model take the weighted mean of previous models. I will write blogs to dig more deeply into Bagging and Boosting Ensemble Learning methods.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   

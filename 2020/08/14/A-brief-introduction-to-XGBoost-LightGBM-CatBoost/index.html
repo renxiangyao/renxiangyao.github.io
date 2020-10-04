@@ -22,21 +22,24 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Welcome to my blog!  Thanks to Hexo, I have recently re-built my personal website using Hexo framework and find the whole process fast and simple. There seems to be a lot of powerful features in this">
+  <meta name="description" content="Recently I tried out using CatBoost to carry out a machine learning prediction, and found it very useful and convenient. It has unique features and strengths comparing to the other very popular Boosti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World!">
-<meta property="og:url" content="http://yoursite.com/2020/08/07/hello-world/index.html">
+<meta property="og:title" content="A brief introduction to XGBoost, LightGBM, CatBoost">
+<meta property="og:url" content="http://yoursite.com/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/index.html">
 <meta property="og:site_name" content="Vincent Ren">
-<meta property="og:description" content="Welcome to my blog!  Thanks to Hexo, I have recently re-built my personal website using Hexo framework and find the whole process fast and simple. There seems to be a lot of powerful features in this">
+<meta property="og:description" content="Recently I tried out using CatBoost to carry out a machine learning prediction, and found it very useful and convenient. It has unique features and strengths comparing to the other very popular Boosti">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-07T09:46:36.581Z">
-<meta property="article:modified_time" content="2020-08-21T04:00:21.023Z">
+<meta property="article:published_time" content="2020-08-14T10:46:38.000Z">
+<meta property="article:modified_time" content="2020-10-04T10:25:24.415Z">
 <meta property="article:author" content="Vincent Ren">
-<meta property="article:tag" content="blog testing">
+<meta property="article:tag" content="Machine Learning">
+<meta property="article:tag" content="XGBoost">
+<meta property="article:tag" content="LightGBM">
+<meta property="article:tag" content="CatBoost">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/2020/08/07/hello-world/">
+<link rel="canonical" href="http://yoursite.com/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/">
 
 
 <script class="page-configurations">
@@ -49,7 +52,7 @@
   };
 </script>
 
-  <title>Hello World! | Vincent Ren</title>
+  <title>A brief introduction to XGBoost, LightGBM, CatBoost | Vincent Ren</title>
   
 
 
@@ -211,7 +214,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-code-sample-test"><span class="nav-number">1.</span> <span class="nav-text">Some code sample test</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python"><span class="nav-number">1.1.</span> <span class="nav-text">Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#R"><span class="nav-number">1.2.</span> <span class="nav-text">R</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAS"><span class="nav-number">1.3.</span> <span class="nav-text">SAS</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Boosting-in-Ensemble-Learning"><span class="nav-number">1.</span> <span class="nav-text">Boosting in Ensemble Learning</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GBM-Gradient-Boosting-Machine"><span class="nav-number">2.</span> <span class="nav-text">GBM (Gradient Boosting Machine)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XGBoost-Extreme-Gradient-Boosting-Machine"><span class="nav-number">3.</span> <span class="nav-text">XGBoost (Extreme Gradient Boosting Machine)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LightGBM"><span class="nav-number">4.</span> <span class="nav-text">LightGBM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CatBoost"><span class="nav-number">5.</span> <span class="nav-text">CatBoost</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">6.</span> <span class="nav-text">Summary</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -285,7 +288,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/07/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -300,7 +303,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World!
+          A brief introduction to XGBoost, LightGBM, CatBoost
         </h1>
 
         <div class="post-meta">
@@ -310,7 +313,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-08-07 21:46:36" itemprop="dateCreated datePublished" datetime="2020-08-07T21:46:36+12:00">2020-08-07</time>
+              <time title="Created: 2020-08-14 22:46:38" itemprop="dateCreated datePublished" datetime="2020-08-14T22:46:38+12:00">2020-08-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -318,7 +321,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                  <a href="/categories/Intro-and-Summary/" itemprop="url" rel="index"><span itemprop="name">Intro and Summary</span></a>
                 </span>
             </span>
 
@@ -338,15 +341,95 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://renxiangyao.github.io/">my blog</a>! </p>
-<p>Thanks to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>, I have recently re-built my personal website using Hexo framework and find the whole process fast and simple. There seems to be a lot of powerful features in this framework and I will try to explore them in the near future.</p>
-<p>Because of the good experience, hence personally I highly recommend using Hexo if you want to build your own personal website on GitHub Pages, although it is not officially supported by GitHub (unlike [Jekyll]). I will try to write some blog posts on how to setup a person website using Hexo + GitHub Pages. At the moment, if you got any questions, you can ask me on my <a href="mailto:renxiangyao@gmail.com">Email</a>.</p>
-<p>This is a testing post. Just to have a go on blog writing with some code sample test. </p>
-<h2 id="Some-code-sample-test"><a href="#Some-code-sample-test" class="headerlink" title="Some code sample test"></a>Some code sample test</h2><h3 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;C:/Python/data/test.csv&#x27;</span>, header=<span class="number">0</span>)</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+        <p>Recently I tried out using <strong>CatBoost</strong> to carry out a machine learning prediction, and found it very useful and convenient. It has unique features and strengths comparing to the other very popular Boosting Machine ML (Machine Learning) algorithms like XGBoost, LightGBM, etc. Hence, I think writing a blog to briefly introduce and summarise these popularly used Boosting Machines ML (Machine Learning) algorithms would be handy. Some of the statements are based on my own understanding and experiences and may be biased.</p>
+<h1 id="Boosting-in-Ensemble-Learning"><a href="#Boosting-in-Ensemble-Learning" class="headerlink" title="Boosting in Ensemble Learning"></a>Boosting in Ensemble Learning</h1><p>To understand Boosting, we use the structure below to better illustrate the idea:</p>
+<ul>
+<li>Ensemble Learning    <ul>
+<li>Bagging</li>
+<li>Boosting<ul>
+<li>GBM</li>
+<li>XGBoost</li>
+<li>LightGBM</li>
+<li>CatBoost</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>What is an Ensemble Learning? As the word “Ensemble” reveals, it is a concept of collective intelligence. Instead of using only one machine learning model to predict the target, Ensemble learning combines multiple ML models, and gives an aggregated prediction from several models.</p>
+<p>Bagging and Boosting are 2 widely used Ensemble Learning methods. In short, Bagging split the training dataset into multiple datasets, then build machine learning models (usually decision tree model) on each splited dataset, then aggregated the output to provide a single prediction on the target. In Boosting, the models are built sequetially where each subsequent decision tree model aims to reduce the errors of previous decision tree model. Subsequent models are based on previous model, then the final model take the weighted mean of previous models. I will write blogs to dig more deeply into Bagging and Boosting Ensemble Learning methods.</p>
 <a id="more"></a>
-<h3 id="R"><a href="#R" class="headerlink" title="R"></a>R</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(tidyverse)</span><br><span class="line"><span class="keyword">library</span>(forecast)</span><br><span class="line">df&lt;-read.csv(<span class="string">&quot;C:/R/data/test.csv&quot;</span>,header=<span class="literal">TRUE</span>, sep=<span class="string">&quot;,&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="SAS"><a href="#SAS" class="headerlink" title="SAS"></a>SAS</h3><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">libname</span> data <span class="string">&quot;C:\SAS\data&quot;</span>;</span><br><span class="line"><span class="keyword">data </span>work.test1;</span><br><span class="line"><span class="meta">set</span> data.testdata;</span><br><span class="line"><span class="keyword">run;</span></span><br></pre></td></tr></table></figure>
+<h1 id="GBM-Gradient-Boosting-Machine"><a href="#GBM-Gradient-Boosting-Machine" class="headerlink" title="GBM (Gradient Boosting Machine)"></a>GBM (Gradient Boosting Machine)</h1><p>The prediction improves iteratively in Boosting. When we build the subsequent model, How do we find the direction to reduce the prediction error of preivous decision tree model fastly? GBM (Gradient Boosting) use Gradient Descent method to optimize the Loss function (function defined on prediction error) to find the direction of next iteration. Hence comes the name of Gradient Boosting.<br>Add in the graph of GBM</p>
+<h1 id="XGBoost-Extreme-Gradient-Boosting-Machine"><a href="#XGBoost-Extreme-Gradient-Boosting-Machine" class="headerlink" title="XGBoost (Extreme Gradient Boosting Machine)"></a><a target="_blank" rel="noopener" href="https://xgboost.readthedocs.io/en/latest/">XGBoost</a> (Extreme Gradient Boosting Machine)</h1><p>As the name “Extreme” suggests, XGBoost is an advanced implementation of GBM. Although the concept are similar to GBM, but the algorithm and implementation when carring out the calculations are hugely improved and well-engineered. XGBoost has proved to be a very effective and powerful ML algorithm, extensively used in ML competitions and hackathons, like Kaggle etc, and won great reputations (<a target="_blank" rel="noopener" href="https://atlas.cern/updates/atlas-news/machine-learning-wins-higgs-challenge">one example</a>). XGBoost initially started as a research project by <a target="_blank" rel="noopener" href="https://tqchen.com/"><strong>Tianqi Chen</strong></a>. Over the years since 2014, XGBoost has growed a large community of users, hence providing great support if you want to implement advanced features. The most important 2 unique features of XGBoost compare to GBM is <strong>Regularization</strong> and <strong>Parallel Processing</strong>. XGBoost includes a variety of regularization which prevents overfitting and improves overall performance. And XGBoost can make use of multiple cores of CPUs and GPUs to achieve faster computing, significantly reduces training time.</p>
+<h1 id="LightGBM"><a href="#LightGBM" class="headerlink" title="LightGBM"></a><a target="_blank" rel="noopener" href="https://lightgbm.readthedocs.io/en/latest/">LightGBM</a></h1><p><strong>Microsoft</strong> released 1st stable version of LightGBM (often in short LGBM) in Jan 2017. Hence it has relatively smaller community, but it starts to catch great attention in recent years because it beats the other Gradient Boosting algorithms when the dataset is extremely large, but it does <em>not</em> work well on small datasets. This unique feature is because LightGBM has adopted a very special “leaf-wise” tree growth method. We will not go into technical details here, but due to this “leaf-wise” tree growth strategy, when facing extremely large datasets, it can achieve much better accuracy and faster speed that other algorithms hard to achieve. Hence the word “Light”. But it is also a “Double-edged sword”, also because of this, it is not able to work well with small datasets since overfitting can happen with this “leaf-wise” tree growth strategy.</p>
+<h1 id="CatBoost"><a href="#CatBoost" class="headerlink" title="CatBoost"></a><a target="_blank" rel="noopener" href="https://catboost.ai/">CatBoost</a></h1><p>CatBoost is relatively new. I think its 1st debut was around 2017 developed by <strong>Yandex</strong> (a company like Google search in Russia). Just like XGBoost and LGBM, It is an Open-Source ML libary for Gradient Boosting on Decision Trees. The unique feature of CatBoost is automatically handling Categorical features. Hnadling categorical variables can be a tedious process, especially when you have a large number of categorical variables. When the categorical variables have a lot of levels, performing one-hot-encoding (the method to transform categorical variable to numerical variable) will increase the dimensionality exponentially, and the dataset can become really chanllenging to work with. Hence, CatBoost automatically deal with categorical variables effectively can provide great ease of use when you have to deal with mulptile categories of data, such as Audio, Text, Image, etc.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>I have summarised some key features of XGBoost, LGBM, and CatBoost algorithms in the table below. In my opinion, there is no universal best model in all scenarios. Each model got its own strengths and unique features and hence will be case by case basis.</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>XGBoost</th>
+<th>LightGBM</th>
+<th>CatBoost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ease of Use</td>
+<td>Easy to use</td>
+<td>Easy to use</td>
+<td>Easy to use</td>
+</tr>
+<tr>
+<td>Community Support</td>
+<td>Relatively large community</td>
+<td>Still new, relatively small community</td>
+<td>Still new, relatively small community</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Fast</td>
+<td>Very Fast</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Data size</td>
+<td>Works well for both large and small dataset</td>
+<td>Works well for extremely large dataset Does <em>not</em> work well on small dataset</td>
+<td>Works well for both large and small dataset</td>
+</tr>
+<tr>
+<td>Parallel Processing</td>
+<td>Supported</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Missing Value Handling</td>
+<td>Automaticaly</td>
+<td>Automaticaly</td>
+<td>Automaticaly</td>
+</tr>
+<tr>
+<td>Categorical Features Handling</td>
+<td>Manually pre-processing</td>
+<td>Limited</td>
+<td>Automaticaly</td>
+</tr>
+<tr>
+<td>Tree Growth</td>
+<td>Splits up to the specified max_depth hyperparameter and then starts pruning the tree backwards</td>
+<td>leaf-wise tree growth</td>
+<td>grows a balanced tree</td>
+</tr>
+<tr>
+<td>Split method</td>
+<td>Not using any weighted sampling techniques, which makes split process slower</td>
+<td>Supports Gradient-based One-side Sampling (GOSS) which speed up the split process</td>
+<td>Offers Minimal Variance Sampling (MVS) which speed up the split process</td>
+</tr>
+</tbody></table>
+<p>That’s all for now! Hope it will be useful. Next I plan to write a blog on implementing CatBoost to solve a classification problem with code examples. Stay tuned!</p>
+<p>Until next time, Take care.</p>
 
     </div>
 
@@ -356,7 +439,10 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/blog-testing/" rel="tag"># blog testing</a>
+              <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+              <a href="/tags/XGBoost/" rel="tag"># XGBoost</a>
+              <a href="/tags/LightGBM/" rel="tag"># LightGBM</a>
+              <a href="/tags/CatBoost/" rel="tag"># CatBoost</a>
           </div>
 
         
@@ -364,11 +450,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/" rel="next" title="A brief introduction to XGBoost, LightGBM, CatBoost">
-      A brief introduction to XGBoost, LightGBM, CatBoost <i class="fa fa-chevron-right"></i>
+    <a href="/2020/08/07/hello-world/" rel="prev" title="Hello World!">
+      <i class="fa fa-chevron-left"></i> Hello World!
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     

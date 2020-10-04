@@ -20,4 +20,107 @@
         <tag>blog testing</tag>
       </tags>
   </entry>
+  <entry>
+    <title>A brief introduction to XGBoost, LightGBM, CatBoost</title>
+    <url>/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/</url>
+    <content><![CDATA[<p>Recently I tried out using <strong>CatBoost</strong> to carry out a machine learning prediction, and found it very useful and convenient. It has unique features and strengths comparing to the other very popular Boosting Machine ML (Machine Learning) algorithms like XGBoost, LightGBM, etc. Hence, I think writing a blog to briefly introduce and summarise these popularly used Boosting Machines ML (Machine Learning) algorithms would be handy. Some of the statements are based on my own understanding and experiences and may be biased.</p>
+<h1 id="Boosting-in-Ensemble-Learning"><a href="#Boosting-in-Ensemble-Learning" class="headerlink" title="Boosting in Ensemble Learning"></a>Boosting in Ensemble Learning</h1><p>To understand Boosting, we use the structure below to better illustrate the idea:</p>
+<ul>
+<li>Ensemble Learning    <ul>
+<li>Bagging</li>
+<li>Boosting<ul>
+<li>GBM</li>
+<li>XGBoost</li>
+<li>LightGBM</li>
+<li>CatBoost</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>What is an Ensemble Learning? As the word “Ensemble” reveals, it is a concept of collective intelligence. Instead of using only one machine learning model to predict the target, Ensemble learning combines multiple ML models, and gives an aggregated prediction from several models.</p>
+<p>Bagging and Boosting are 2 widely used Ensemble Learning methods. In short, Bagging split the training dataset into multiple datasets, then build machine learning models (usually decision tree model) on each splited dataset, then aggregated the output to provide a single prediction on the target. In Boosting, the models are built sequetially where each subsequent decision tree model aims to reduce the errors of previous decision tree model. Subsequent models are based on previous model, then the final model take the weighted mean of previous models. I will write blogs to dig more deeply into Bagging and Boosting Ensemble Learning methods.</p>
+<a id="more"></a>
+<h1 id="GBM-Gradient-Boosting-Machine"><a href="#GBM-Gradient-Boosting-Machine" class="headerlink" title="GBM (Gradient Boosting Machine)"></a>GBM (Gradient Boosting Machine)</h1><p>The prediction improves iteratively in Boosting. When we build the subsequent model, How do we find the direction to reduce the prediction error of preivous decision tree model fastly? GBM (Gradient Boosting) use Gradient Descent method to optimize the Loss function (function defined on prediction error) to find the direction of next iteration. Hence comes the name of Gradient Boosting.<br>Add in the graph of GBM</p>
+<h1 id="XGBoost-Extreme-Gradient-Boosting-Machine"><a href="#XGBoost-Extreme-Gradient-Boosting-Machine" class="headerlink" title="XGBoost (Extreme Gradient Boosting Machine)"></a><a href="https://xgboost.readthedocs.io/en/latest/">XGBoost</a> (Extreme Gradient Boosting Machine)</h1><p>As the name “Extreme” suggests, XGBoost is an advanced implementation of GBM. Although the concept are similar to GBM, but the algorithm and implementation when carring out the calculations are hugely improved and well-engineered. XGBoost has proved to be a very effective and powerful ML algorithm, extensively used in ML competitions and hackathons, like Kaggle etc, and won great reputations (<a href="https://atlas.cern/updates/atlas-news/machine-learning-wins-higgs-challenge">one example</a>). XGBoost initially started as a research project by <a href="https://tqchen.com/"><strong>Tianqi Chen</strong></a>. Over the years since 2014, XGBoost has growed a large community of users, hence providing great support if you want to implement advanced features. The most important 2 unique features of XGBoost compare to GBM is <strong>Regularization</strong> and <strong>Parallel Processing</strong>. XGBoost includes a variety of regularization which prevents overfitting and improves overall performance. And XGBoost can make use of multiple cores of CPUs and GPUs to achieve faster computing, significantly reduces training time.</p>
+<h1 id="LightGBM"><a href="#LightGBM" class="headerlink" title="LightGBM"></a><a href="https://lightgbm.readthedocs.io/en/latest/">LightGBM</a></h1><p><strong>Microsoft</strong> released 1st stable version of LightGBM (often in short LGBM) in Jan 2017. Hence it has relatively smaller community, but it starts to catch great attention in recent years because it beats the other Gradient Boosting algorithms when the dataset is extremely large, but it does <em>not</em> work well on small datasets. This unique feature is because LightGBM has adopted a very special “leaf-wise” tree growth method. We will not go into technical details here, but due to this “leaf-wise” tree growth strategy, when facing extremely large datasets, it can achieve much better accuracy and faster speed that other algorithms hard to achieve. Hence the word “Light”. But it is also a “Double-edged sword”, also because of this, it is not able to work well with small datasets since overfitting can happen with this “leaf-wise” tree growth strategy.</p>
+<h1 id="CatBoost"><a href="#CatBoost" class="headerlink" title="CatBoost"></a><a href="https://catboost.ai/">CatBoost</a></h1><p>CatBoost is relatively new. I think its 1st debut was around 2017 developed by <strong>Yandex</strong> (a company like Google search in Russia). Just like XGBoost and LGBM, It is an Open-Source ML libary for Gradient Boosting on Decision Trees. The unique feature of CatBoost is automatically handling Categorical features. Hnadling categorical variables can be a tedious process, especially when you have a large number of categorical variables. When the categorical variables have a lot of levels, performing one-hot-encoding (the method to transform categorical variable to numerical variable) will increase the dimensionality exponentially, and the dataset can become really chanllenging to work with. Hence, CatBoost automatically deal with categorical variables effectively can provide great ease of use when you have to deal with mulptile categories of data, such as Audio, Text, Image, etc.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>I have summarised some key features of XGBoost, LGBM, and CatBoost algorithms in the table below. In my opinion, there is no universal best model in all scenarios. Each model got its own strengths and unique features and hence will be case by case basis.</p>
+<table>
+<thead>
+<tr>
+<th>Features</th>
+<th>XGBoost</th>
+<th>LightGBM</th>
+<th>CatBoost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ease of Use</td>
+<td>Easy to use</td>
+<td>Easy to use</td>
+<td>Easy to use</td>
+</tr>
+<tr>
+<td>Community Support</td>
+<td>Relatively large community</td>
+<td>Still new, relatively small community</td>
+<td>Still new, relatively small community</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Fast</td>
+<td>Very Fast</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td>Data size</td>
+<td>Works well for both large and small dataset</td>
+<td>Works well for extremely large dataset Does <em>not</em> work well on small dataset</td>
+<td>Works well for both large and small dataset</td>
+</tr>
+<tr>
+<td>Parallel Processing</td>
+<td>Supported</td>
+<td>Supported</td>
+<td>Supported</td>
+</tr>
+<tr>
+<td>Missing Value Handling</td>
+<td>Automaticaly</td>
+<td>Automaticaly</td>
+<td>Automaticaly</td>
+</tr>
+<tr>
+<td>Categorical Features Handling</td>
+<td>Manually pre-processing</td>
+<td>Limited</td>
+<td>Automaticaly</td>
+</tr>
+<tr>
+<td>Tree Growth</td>
+<td>Splits up to the specified max_depth hyperparameter and then starts pruning the tree backwards</td>
+<td>leaf-wise tree growth</td>
+<td>grows a balanced tree</td>
+</tr>
+<tr>
+<td>Split method</td>
+<td>Not using any weighted sampling techniques, which makes split process slower</td>
+<td>Supports Gradient-based One-side Sampling (GOSS) which speed up the split process</td>
+<td>Offers Minimal Variance Sampling (MVS) which speed up the split process</td>
+</tr>
+</tbody></table>
+<p>That’s all for now! Hope it will be useful. Next I plan to write a blog on implementing CatBoost to solve a classification problem with code examples. Stay tuned!</p>
+<p>Until next time, Take care.</p>
+]]></content>
+      <categories>
+        <category>Intro and Summary</category>
+      </categories>
+      <tags>
+        <tag>Machine Learning</tag>
+        <tag>XGBoost</tag>
+        <tag>LightGBM</tag>
+        <tag>CatBoost</tag>
+      </tags>
+  </entry>
 </search>
