@@ -30,13 +30,11 @@
 <meta property="og:description" content="Customer propensity predictive models are one of the most common preditive models in Data mining for Customer insights. It is a very powerful tool to predict Customer responses as well as Customer res">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-29T09:03:05.000Z">
-<meta property="article:modified_time" content="2020-10-29T10:41:58.231Z">
+<meta property="article:modified_time" content="2020-10-29T10:57:45.153Z">
 <meta property="article:author" content="Vincent Ren">
 <meta property="article:tag" content="CatBoost">
 <meta property="article:tag" content="Banking">
 <meta property="article:tag" content="Marketing Campaign Analysis">
-<meta property="article:tag" content="Logistic Regression">
-<meta property="article:tag" content="Random Forest">
 <meta name="twitter:card" content="summary">
 
 
@@ -244,7 +242,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -343,7 +341,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <p>Customer propensity predictive models are one of the most common preditive models in Data mining for Customer insights. It is a very powerful tool to predict Customer responses as well as Customer response probabilities for certain Customer engagement activities, like Marketing Campaigns, based on labeled historical data using features like Customer demographics, Customer behaviours, and Customer engagement stats etc. Then the predicted Customer response probability can be used to design marketing campaigns so as to improve marketing campaign effectiveness and increase ROI. Moreover, the relationships between selected features and target Customer response identified from the predictive analysis also have great business value. The insights of these relationships can be used to gain deep understanding of Customers and enable business to better serve Customers through offerings.</p>
-<p>In this blog, I looked into a specific use case in Banking industry and carried out predictive modelling and analysis based on a open banking dataset to predict which Customers are more likely to subscribe Bank Term Deposit.</p>
+<p>In this blog, I looked into a specific use case in Banking industry and carried out predictive modelling and analysis based on a open banking dataset to predict which Customers are more likely to subscribe Bank Term Deposit using CatBoost. If you are interested in knowing more about CatBoost machine learning, you can refer to my <a target="_blank" rel="noopener" href="https://renxiangyao.github.io/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/">previous blog</a> briefly talked about it</p>
 <a id="more"></a>
 
 <h1 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h1><p>The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.<br>This open bank marketing campaign dataset can be downloaded from <a target="_blank" rel="noopener" href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing#">UCI data repository</a>. The full dataset was described and analyzed in <a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/236231158_Using_Data_Mining_for_Bank_Direct_Marketing_An_Application_of_the_CRISP-DM_Methodology">[Moro et al., 2011]</a>.<br>This banking dataset has variables below.</p>
@@ -378,7 +376,9 @@
 </ol>
 </li>
 </ul>
-<h1 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h1><h1 id="Data-Preparation-amp-EDA-Exploratory-Data-Analysis"><a href="#Data-Preparation-amp-EDA-Exploratory-Data-Analysis" class="headerlink" title="Data Preparation &amp; EDA (Exploratory Data Analysis)"></a>Data Preparation &amp; EDA (Exploratory Data Analysis)</h1><h1 id="Predictive-Models-amp-Validation"><a href="#Predictive-Models-amp-Validation" class="headerlink" title="Predictive Models &amp; Validation"></a>Predictive Models &amp; Validation</h1><script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<h1 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h1><p>Term deposits allow banks to hold onto a deposit for a specific amount of time, so banks can invest in higher gain financial products to make a profit. In addition, banks also hold better chance to persuade term deposit clients into buying other products such as funds or insurance to further increase their revenues. As a result, the Portuguese bank would like to identify existing clients that have higher chance to subscribe for a term deposit and focus marketing effort on such clients.</p>
+<p><strong>Objective</strong>: Develop a predictive model to </p>
+<h1 id="Data-Preparation-amp-EDA-Exploratory-Data-Analysis"><a href="#Data-Preparation-amp-EDA-Exploratory-Data-Analysis" class="headerlink" title="Data Preparation &amp; EDA (Exploratory Data Analysis)"></a>Data Preparation &amp; EDA (Exploratory Data Analysis)</h1><h1 id="Predictive-Models-amp-Validation"><a href="#Predictive-Models-amp-Validation" class="headerlink" title="Predictive Models &amp; Validation"></a>Predictive Models &amp; Validation</h1><script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 <iframe id='ipynb'   marginheight="0" frameborder="0" width='924px' srcdoc="<!DOCTYPE html>
 <html>
@@ -13729,8 +13729,6 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
               <a href="/tags/CatBoost/" rel="tag"># CatBoost</a>
               <a href="/tags/Banking/" rel="tag"># Banking</a>
               <a href="/tags/Marketing-Campaign-Analysis/" rel="tag"># Marketing Campaign Analysis</a>
-              <a href="/tags/Logistic-Regression/" rel="tag"># Logistic Regression</a>
-              <a href="/tags/Random-Forest/" rel="tag"># Random Forest</a>
           </div>
 
         

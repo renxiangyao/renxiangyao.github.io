@@ -227,7 +227,7 @@ With increased revenue and reduced cost, business becomes more profitable, which
     <title>Predict which customers are more likely to respond to Bank marketing campaigns</title>
     <url>/2020/10/29/predictive-models-bank-marketing-campaign/</url>
     <content><![CDATA[<p>Customer propensity predictive models are one of the most common preditive models in Data mining for Customer insights. It is a very powerful tool to predict Customer responses as well as Customer response probabilities for certain Customer engagement activities, like Marketing Campaigns, based on labeled historical data using features like Customer demographics, Customer behaviours, and Customer engagement stats etc. Then the predicted Customer response probability can be used to design marketing campaigns so as to improve marketing campaign effectiveness and increase ROI. Moreover, the relationships between selected features and target Customer response identified from the predictive analysis also have great business value. The insights of these relationships can be used to gain deep understanding of Customers and enable business to better serve Customers through offerings.</p>
-<p>In this blog, I looked into a specific use case in Banking industry and carried out predictive modelling and analysis based on a open banking dataset to predict which Customers are more likely to subscribe Bank Term Deposit.</p>
+<p>In this blog, I looked into a specific use case in Banking industry and carried out predictive modelling and analysis based on a open banking dataset to predict which Customers are more likely to subscribe Bank Term Deposit using CatBoost. If you are interested in knowing more about CatBoost machine learning, you can refer to my <a href="https://renxiangyao.github.io/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/">previous blog</a> briefly talked about it</p>
 <a id="more"></a>
 
 <h1 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h1><p>The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.<br>This open bank marketing campaign dataset can be downloaded from <a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing#">UCI data repository</a>. The full dataset was described and analyzed in <a href="https://www.researchgate.net/publication/236231158_Using_Data_Mining_for_Bank_Direct_Marketing_An_Application_of_the_CRISP-DM_Methodology">[Moro et al., 2011]</a>.<br>This banking dataset has variables below.</p>
@@ -262,7 +262,9 @@ With increased revenue and reduced cost, business becomes more profitable, which
 </ol>
 </li>
 </ul>
-<h1 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h1><h1 id="Data-Preparation-amp-EDA-Exploratory-Data-Analysis"><a href="#Data-Preparation-amp-EDA-Exploratory-Data-Analysis" class="headerlink" title="Data Preparation &amp; EDA (Exploratory Data Analysis)"></a>Data Preparation &amp; EDA (Exploratory Data Analysis)</h1><h1 id="Predictive-Models-amp-Validation"><a href="#Predictive-Models-amp-Validation" class="headerlink" title="Predictive Models &amp; Validation"></a>Predictive Models &amp; Validation</h1><script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<h1 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h1><p>Term deposits allow banks to hold onto a deposit for a specific amount of time, so banks can invest in higher gain financial products to make a profit. In addition, banks also hold better chance to persuade term deposit clients into buying other products such as funds or insurance to further increase their revenues. As a result, the Portuguese bank would like to identify existing clients that have higher chance to subscribe for a term deposit and focus marketing effort on such clients.</p>
+<p><strong>Objective</strong>: Develop a predictive model to </p>
+<h1 id="Data-Preparation-amp-EDA-Exploratory-Data-Analysis"><a href="#Data-Preparation-amp-EDA-Exploratory-Data-Analysis" class="headerlink" title="Data Preparation &amp; EDA (Exploratory Data Analysis)"></a>Data Preparation &amp; EDA (Exploratory Data Analysis)</h1><h1 id="Predictive-Models-amp-Validation"><a href="#Predictive-Models-amp-Validation" class="headerlink" title="Predictive Models &amp; Validation"></a>Predictive Models &amp; Validation</h1><script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 <iframe id='ipynb'   marginheight="0" frameborder="0" width='924px' srcdoc="<!DOCTYPE html>
 <html>
@@ -13609,8 +13611,6 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
         <tag>CatBoost</tag>
         <tag>Banking</tag>
         <tag>Marketing Campaign Analysis</tag>
-        <tag>Logistic Regression</tag>
-        <tag>Random Forest</tag>
       </tags>
   </entry>
 </search>
