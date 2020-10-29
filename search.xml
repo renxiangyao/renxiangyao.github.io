@@ -274,7 +274,7 @@ With increased revenue and reduced cost, business becomes more profitable, which
 </li>
 <li><p><strong>Contact</strong>: if contacted to Mobile, clients more likely to subscribe; hmm… why?<br><img src="/images/bank/contact.png" alt="contact"></p>
 </li>
-<li><p><strong>poutcome</strong>: Clients who has previous successful marketing campaign more likely to subscribe. This is intuitive as past successful campaign may lead to next one.</p>
+<li><p><strong>poutcome</strong>: Clients who has previous successful marketing campaign more likely to subscribe. This is intuitive as past successful campaign may lead to next one;<br><img src="/images/bank/poutcome.png" alt="poutcome"></p>
 </li>
 <li><p><strong>Month &amp; Day</strong>: Mar, Apr, Sep, Oct got higher likelyhood, and there are certain days in the Month will have higher likelihood to subscribe. It is worth but not covered in this analysis that to transform day in a month to weekdays to further identify the pattern/insights;<br><img src="/images/bank/month.png" alt="month"></p>
 </li>
