@@ -224,7 +224,7 @@ With increased revenue and reduced cost, business becomes more profitable, which
       </tags>
   </entry>
   <entry>
-    <title>Predict which customers are more likely to respond to Bank marketing campaigns</title>
+    <title>Customer response to Bank marketing campaign: To be or Not to be? It is a prediction.</title>
     <url>/2020/10/29/predictive-models-bank-marketing-campaign/</url>
     <content><![CDATA[<p>Customer propensity predictive models are one of the most common preditive models in Data mining for Customer insights. It is a very powerful tool to predict Customer responses as well as Customer response probabilities for certain Customer engagement activities, like Marketing Campaigns, based on labeled historical data using features like Customer demographics, Customer behaviours, and Customer engagement stats etc. Then the predicted Customer response probability can be used to design marketing campaigns so as to improve marketing campaign effectiveness and increase ROI. Moreover, the relationships between selected features and target Customer response identified from the predictive analysis also have great business value. The insights of these relationships can be used to gain deep understanding of Customers and enable business to better serve Customers through offerings.</p>
 <p>In this blog, I looked into a specific use case in Banking industry and carried out predictive modelling and analysis based on a open banking dataset to predict which Customers are more likely to subscribe Bank Term Deposit using CatBoost. If you are interested in knowing more about CatBoost machine learning, you can refer to my <a href="https://renxiangyao.github.io/2020/08/14/A-brief-introduction-to-XGBoost-LightGBM-CatBoost/">previous blog</a> which briefly talked about it.</p>
@@ -294,7 +294,7 @@ With increased revenue and reduced cost, business becomes more profitable, which
 <h1 id="Code-Python-Notebook-amp-GitHub-repository"><a href="#Code-Python-Notebook-amp-GitHub-repository" class="headerlink" title="Code (Python Notebook) &amp; GitHub repository"></a>Code (Python Notebook) &amp; GitHub repository</h1><script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 
-<iframe id='ipynb'   marginheight="0" frameborder="0" width='924px' srcdoc="<!DOCTYPE html>
+<iframe id='ipynb'   marginheight="0" frameborder="0" width='924px' height='680px' srcdoc="<!DOCTYPE html>
 <html>
 <head><meta charset='utf-8' />
 
